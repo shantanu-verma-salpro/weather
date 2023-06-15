@@ -107,7 +107,7 @@ async function getData(loc) {
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
-
+// eslint-disable-next-line react/display-name
 const Location = React.memo(({ weatherData }) => {
     return (
         <>
@@ -125,7 +125,7 @@ const Location = React.memo(({ weatherData }) => {
         </>
     );
 });
-
+// eslint-disable-next-line react/display-name
 const Temperature = React.memo(({ weatherData }) => {
     const wUnit = {
         "0": "Unknown",
@@ -171,7 +171,7 @@ const Temperature = React.memo(({ weatherData }) => {
         </>
     );
 });
-
+// eslint-disable-next-line react/display-name
 const WInfo = React.memo(({ weatherData }) => {
     return (
         <Stack direction="row" spacing={2}>
@@ -270,7 +270,7 @@ export default function Home() {
         setWeatherData(d);
         setOpen(false);
     };
-
+// eslint-disable-next-line react/display-name
     const InputWeather = React.memo(() => {
         return (
             <div style={{ display: 'flex', alignItems: 'flex-end' }}>
@@ -290,7 +290,7 @@ export default function Home() {
     useEffect(() => {
         document.body.style.backgroundColor = '#151f52';
         const x = async () => {
-            const d = await getData(ival.label);
+            const d = await getData(data[0].label);
             setWeatherData(d);
         };
         x();
@@ -343,4 +343,3 @@ export default function Home() {
         </Container>
     );
 }
-Home.displayName = 'MyApp';
