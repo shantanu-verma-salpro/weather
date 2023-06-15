@@ -96,7 +96,7 @@ async function getData1(loc) {
 
 
 async function getData(loc) {
-    const res = await fetch('https://api.tomorrow.io/v4/weather/realtime?location=' + loc + '&apikey=V2tDwfciBdDgtR42aQ8P929YElMvbgJj')
+    const res = await fetch('https://api.tomorrow.io/v4/weather/realtime?location=' + loc + '&apikey=ZY1wIYzc9PNgoq8FqQoDWq8uI2zK0GES')
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
